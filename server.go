@@ -548,7 +548,7 @@ func (server *Server) loadConfig(configurations configs, globalConfiguration Glo
 
 						if stickysession {
 							sticky = roundrobin.NewStickySession(cookiename)
-							cookiename = "_TRAEFIK_SERVERNAME"
+							cookiename = "_TRAEFIK_BACKEND"
 						}
 
 						switch lbMethod {
