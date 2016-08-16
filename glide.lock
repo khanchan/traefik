@@ -1,5 +1,5 @@
-hash: b82175c1aafff6c4e98c8ac4baea3832895c9600beac445c10af4c004982ef05
-updated: 2016-09-20T16:03:26.379383173+02:00
+hash: 809b3fa812ca88940fdc15530804a4bcd881708e4819fed5aa45c42c871ba5cf
+updated: 2016-09-20T14:50:04.029710103+02:00
 imports:
 - name: github.com/abbot/go-http-auth
   version: cb4372376e1e00e9f6ab9ec142e029302c9e7140
@@ -36,7 +36,7 @@ imports:
   subpackages:
   - spew
 - name: github.com/docker/distribution
-  version: b6e0cfbdaa1ddc3a17c95142c7bf6e42c5567370
+  version: 857d0f15c0a4d8037175642e0ca3660829551cb5
   subpackages:
   - context
   - digest
@@ -123,6 +123,8 @@ imports:
   - tlsconfig
 - name: github.com/docker/go-units
   version: f2145db703495b2e525c59662db69a7344b00bb8
+- name: github.com/docker/leadership
+  version: bfc7753dd48af19513b29deec23c364bf0f274eb
 - name: github.com/docker/libcompose
   version: d1876c1d68527a49c0aac22a0b161acc7296b740
   subpackages:
@@ -141,7 +143,7 @@ imports:
   - version
   - yaml
 - name: github.com/docker/libkv
-  version: 3fce6a0f26e07da3eac45796a8e255547a47a750
+  version: aabc039ad04deb721e234f99cd1b4aa28ac71a40
   subpackages:
   - store
   - store/boltdb
@@ -157,7 +159,7 @@ imports:
 - name: github.com/go-check/check
   version: 4f90aeace3a26ad7021961c297b22c42160c7b25
 - name: github.com/gogo/protobuf
-  version: a11c89fbb0ad4acfa8abc4a4d5f7e27c477169b1
+  version: e57a569e1882958f6b188cb42231d6db87701f2a
   subpackages:
   - proto
 - name: github.com/golang/glog
@@ -219,13 +221,13 @@ imports:
 - name: github.com/miekg/dns
   version: 5d001d020961ae1c184f9f8152fdc73810481677
 - name: github.com/mitchellh/mapstructure
-  version: ca63d7c062ee3c9f34db231e352b60012b4fd0c1
+  version: 21a35fb16463dfb7c8eee579c65d995d95e64d1e
 - name: github.com/moul/http2curl
   version: b1479103caacaa39319f75e7f57fc545287fca0d
 - name: github.com/ogier/pflag
   version: 45c278ab3607870051a2ea9040bb85fcb8557481
 - name: github.com/opencontainers/runc
-  version: 38e0df9ec67c05e73b656c02c9222f24c1683d73
+  version: ff88baa42fa5b2a1568a3a14665142fb4bdb3a2a
   subpackages:
   - libcontainer/user
 - name: github.com/parnurzeal/gorequest
@@ -240,6 +242,8 @@ imports:
   version: 87e1bca4477a3cc767ca71be023ced183d74e538
   subpackages:
   - zk
+- name: github.com/satori/go.uuid
+  version: 879c5887cd475cd7864858769793b2ceb0d44feb
 - name: github.com/Sirupsen/logrus
   version: 3ec0642a7fb6488f65b06f9040adc67e3990296a
 - name: github.com/streamrail/concurrent-map
