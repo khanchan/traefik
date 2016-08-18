@@ -1,5 +1,5 @@
-hash: 809b3fa812ca88940fdc15530804a4bcd881708e4819fed5aa45c42c871ba5cf
-updated: 2016-09-20T14:50:04.029710103+02:00
+hash: 49c7bd0e32b2764248183bda52f168fe22d69e2db5e17c1dbeebbe71be9929b1
+updated: 2016-08-11T14:33:42.826534934+02:00
 imports:
 - name: github.com/abbot/go-http-auth
   version: cb4372376e1e00e9f6ab9ec142e029302c9e7140
@@ -24,7 +24,7 @@ imports:
 - name: github.com/containous/mux
   version: a819b77bba13f0c0cbe36e437bc2e948411b3996
 - name: github.com/containous/staert
-  version: 044bdfee6c8f5e8fb71f70d5ba1cf4cb11a94e97
+  version: 56058c7d4152831a641764d10ec91132adf061ea
 - name: github.com/coreos/etcd
   version: a70513621cf914e2de4dbf90d8a0328e807ffd12
   subpackages:
