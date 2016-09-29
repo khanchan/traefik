@@ -308,7 +308,7 @@ The static Træfɪk configuration in a key-value store can be automatically crea
 $ traefik storeconfig [flags] ...
 ```
 This command is here only to automate the [process which upload the configuration into the Key-value store](/user-guide/kv-config/#upload-the-configuration-in-the-key-value-store).
-Træfɪk will not start but the [static configuration](/basics/#static-trfk-configuration) will be uploaded into the Key-value store.
+Træfɪk will not start but the [static configuration](/basics/#static-trfk-configuration) will be uploaded into the Key-value store. If you configured Let's Encrypt, your registration account and your certificates will also be uploaded. 
 
 Don't forget to [setup the connection between Træfɪk and Key-value store](/user-guide/kv-config/#launch-trfk).
 
