@@ -100,9 +100,33 @@ Complete documentation is available at https://traefik.io`,
 			if kv == nil {
 				return fmt.Errorf("Error using command storeconfig, no Key-value store defined")
 			}
-			jsonConf, _ := json.Marshal(traefikConfiguration.GlobalConfiguration)
+			jsonConf, err := json.Marshal(traefikConfiguration.GlobalConfiguration)
+			if err != nil {
+				return err
+			}
 			fmtlog.Printf("Storing configuration: %s\n", jsonConf)
-			return kv.StoreConfig(traefikConfiguration.GlobalConfiguration)
+			err = kv.StoreConfig(traefikConfiguration.GlobalConfiguration)
+			if err != nil {
+				return err
+			}
+			if traefikConfiguration.GlobalConfiguration.ACME != nil && len(traefikConfiguration.GlobalConfiguration.ACME.StorageFile) > 0 {
+				// convert ACME json file to KV store
+				store := acme.NewLocalStore(traefikConfiguration.GlobalConfiguration.ACME.StorageFile)
+				object, err := store.Load()
+				if err != nil {
+					return err
+				}
+				account := object.(*acme.Account)
+				source := staert.KvSource{
+					Store:  kv,
+					Prefix: traefikConfiguration.GlobalConfiguration.ACME.Storage,
+				}
+				err = source.StoreConfig(account)
+				if err != nil {
+					return err
+				}
+			}
+			return nil
 		},
 		Metadata: map[string]string{
 			"parseAllSources": "true",

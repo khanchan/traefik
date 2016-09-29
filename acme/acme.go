@@ -108,7 +108,7 @@ func (a *ACME) CreateClusterConfig(leadership *cluster.Leadership, tlsConfig *tl
 	datastore, err := cluster.NewDataStore(
 		staert.KvSource{
 			Store:  leadership.Store,
-			Prefix: leadership.Store.Prefix + "/acme/account",
+			Prefix: a.Storage,
 		},
 		leadership.Pool.Ctx(), &Account{},
 		func(object cluster.Object) error {
